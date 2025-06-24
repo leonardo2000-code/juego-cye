@@ -91,7 +91,7 @@
                 height: 100,
                 x: canvas.width / 2 - 35,
                 y: canvas.height - 110,
-                speed: 35,
+                speed: 15,
                 dx: 0
             };
             let fallingObjects, objectSpawnTimer, spawnInterval;
@@ -124,7 +124,7 @@
                     const currentGoodObjects = fallingObjects.filter(obj => obj.type === 'good').length;
                     let type, img, width = 50, height = 50;
                     const x = Math.random() * (canvas.width - 50);
-                    let speed = 8 + Math.random() * 7 + (gameTime / 3000); // Velocidad inicial más alta y aumento más rápido
+                    let speed = 5 + Math.random() * 7 + (gameTime / 3000); // Velocidad inicial más alta y aumento más rápido
 
                     if (currentGoodObjects < 4 && Math.random() > 0.5) {
                         type = 'good';
